@@ -40,6 +40,44 @@ class Finder {
     // return instance
     return this
   }
+
+  /**
+   * they will be excluded
+   * @returns string
+   */
+  excluded() {
+    //
+    return (
+      ':not([href$="#"])' +
+      ':not([href$=".png"])' +
+      ':not([href$=".jpg"])' +
+      ':not([href$=".mp4"])' +
+      ':not([href$=".mp3"])' +
+      ':not([href$=".gif"])'
+    )
+  }
+
+  /**
+   * they will be selected and excluded
+   * @returns string
+   */
+  selectors() {
+    //
+    return 'a[href^="/"]' + this.excluded()
+  }
+
+  /**
+   * Lists hyperlinks in the DOM.
+   * @param {Document} dom
+   * @returns NodeList
+   */
+  async hyperlinks(dom) {
+    // selects items that match the document's specified selector set
+    let result = dom.querySelectorAll(this.selectors())
+
+    // NodeList
+    return result
+  }
 }
 
 /**
