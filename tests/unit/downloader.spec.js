@@ -11,6 +11,7 @@ const Downloader = require('../../src/downloader')
 describe(`${target}`, function () {
   // Main application carrier
   let downloader
+  let origin = 'https://www.ripe.net/'
 
   /**
    * Instance initalize
@@ -40,5 +41,28 @@ describe(`${target}`, function () {
 
     // condination
     assert(actual instanceof expected)
+  })
+
+  /**
+   * must be the content of the target data.
+   */
+  it(`${target}.fetchContent`, async function () {
+    // module instance
+    downloader = new Downloader()
+
+    // mock
+    let _parameters = null
+
+    // parameters
+    let expected = _parameters
+
+    // operation
+    let result = await downloader.fetchContent(origin)
+
+    // result
+    let actual = result
+
+    // condination
+    assert(actual != expected)
   })
 })
