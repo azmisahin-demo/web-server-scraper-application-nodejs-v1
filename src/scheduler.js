@@ -7,21 +7,21 @@
 
 /**
  * @class
- * Scraper Library
+ * Scheuler Library
  *
  * @example
  *
  *  // module instance
- *  scraper = new Scraper()
+ *  scheuler = new Scheuler()
  *
  *  // mock
- *  let _parameters = Scraper
+ *  let _parameters = Scheuler
  *
  *  // parameters
  *  let expected = _parameters
  *
  *  // operation
- *  let result = scraper
+ *  let result = scheuler
  *
  *  // result
  *  let actual = result
@@ -30,11 +30,11 @@
  *  assert(actual instanceof expected)
  *
  */
-class Scraper {
+class Scheuler {
   /**
    * @constructor
    *
-   * @returns {Scraper} Scraper instance.
+   * @returns {Scheuler} Scheuler instance.
    */
   constructor() {
     // return instance
@@ -43,7 +43,7 @@ class Scraper {
 }
 
 /**
- * Scraper Library
- * @module scraper
+ * Scheuler Library
+ * @module scheuler
  */
-module.exports = Scraper
+module.exports = Scheuler

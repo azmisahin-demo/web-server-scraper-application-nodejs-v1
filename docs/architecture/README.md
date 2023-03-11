@@ -1,3 +1,7 @@
-# Architecture diagram.
+# Diagrams.
 
-# ![Architecture](architecture-diagram.png)
+## architecture diagram
+![architecture-diagram](architecture-diagram.png)
+
+## software diagram
+![software-diagram](software-diagram.png)

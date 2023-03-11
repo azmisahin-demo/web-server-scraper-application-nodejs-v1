@@ -3,10 +3,10 @@
  */
 
 // package define
-const Template = require('../src')
+const Scraper = require('../src')
 
 // module instance
-var template = new Template()
+var scraper = new Scraper()
 
 // a normal status code is returned when the package runs successfully.
-process.exit(template instanceof Template == true ? 0 : 1)
+process.exit(scraper instanceof Scraper == true ? 0 : 1)

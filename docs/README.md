@@ -19,12 +19,7 @@
 |   |   +-- junit.xml               '	Project, Unit test result.
 |   +-- screen                      '	Project, e2e screens.
 +-- src							    '	Project resource files.
-|   ?-- api					        '	In-app services.
-|   ?-- assets			            '	Design assets.
-|   ?-- controllers	                '	The parts that separate the business logic of the application and the user interface.
-|   ?-- core					    '	Application core.
-|   ?-- models					    '	View objects that separate the Controller From the user interface.
-|   ?-- views					    '	The area users view with models.
+|   +-- index					    '	Application core.
 +-- tests                           '	Project testing.
 |   +-- e2e						    '	End-to-end test.
 |   +-- unit					    '	Unit test.

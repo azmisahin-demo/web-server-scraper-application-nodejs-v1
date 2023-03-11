@@ -2,15 +2,15 @@
 const assert = require('assert').strict
 
 // Target condination.
-const target = 'template'
-const Template = require('../../src')
+const target = 'scraper'
+const Scraper = require('../../src')
 
 /**
  * Application initiation tests.
  */
 describe(`${target}`, function () {
   // Main application carrier
-  let template
+  let scraper
 
   /**
    * Instance initalize
@@ -24,16 +24,16 @@ describe(`${target}`, function () {
    */
   it(`${target}.constructor`, function () {
     // module instance
-    template = new Template()
+    scraper = new Scraper()
 
     // mock
-    let _parameters = Template
+    let _parameters = Scraper
 
     // parameters
     let expected = _parameters
 
     // operation
-    let result = template
+    let result = scraper
 
     // result
     let actual = result

@@ -7,21 +7,21 @@
 
 /**
  * @class
- * Scraper Library
+ * Downloader Library
  *
  * @example
  *
  *  // module instance
- *  scraper = new Scraper()
+ *  downloader = new Downloader()
  *
  *  // mock
- *  let _parameters = Scraper
+ *  let _parameters = Downloader
  *
  *  // parameters
  *  let expected = _parameters
  *
  *  // operation
- *  let result = scraper
+ *  let result = downloader
  *
  *  // result
  *  let actual = result
@@ -30,11 +30,11 @@
  *  assert(actual instanceof expected)
  *
  */
-class Scraper {
+class Downloader {
   /**
    * @constructor
    *
-   * @returns {Scraper} Scraper instance.
+   * @returns {Downloader} Downloader instance.
    */
   constructor() {
     // return instance
@@ -43,7 +43,7 @@ class Scraper {
 }
 
 /**
- * Scraper Library
- * @module scraper
+ * Downloader Library
+ * @module template
  */
-module.exports = Scraper
+module.exports = Downloader

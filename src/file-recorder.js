@@ -7,21 +7,21 @@
 
 /**
  * @class
- * Scraper Library
+ * FileRecorder Library
  *
  * @example
  *
  *  // module instance
- *  scraper = new Scraper()
+ *  fileRecorder = new FileRecorder()
  *
  *  // mock
- *  let _parameters = Scraper
+ *  let _parameters = FileRecorder
  *
  *  // parameters
  *  let expected = _parameters
  *
  *  // operation
- *  let result = scraper
+ *  let result = fileRecorder
  *
  *  // result
  *  let actual = result
@@ -30,11 +30,11 @@
  *  assert(actual instanceof expected)
  *
  */
-class Scraper {
+class FileRecorder {
   /**
    * @constructor
    *
-   * @returns {Scraper} Scraper instance.
+   * @returns {FileRecorder} FileRecorder instance.
    */
   constructor() {
     // return instance
@@ -43,7 +43,7 @@ class Scraper {
 }
 
 /**
- * Scraper Library
- * @module scraper
+ * FileRecorder Library
+ * @module fileRecorder
  */
-module.exports = Scraper
+module.exports = FileRecorder

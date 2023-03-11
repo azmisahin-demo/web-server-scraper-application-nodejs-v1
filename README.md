@@ -1,18 +1,21 @@
 # Introduction
-Software webpack template for nodejs javascript scripting language : version 0.1
+web server scraper : version 0.1
 
-🔖: releasing / 0.1.3
+🔖: releasing / 0.1.0
+
+# Software Diagram
+![Software Diagram](docs/architecture/software-diagram.png)
 
 ## Example
 ```js
 // package define
-const Template = require('../src')
+const Scraper = require('../src')
 
 // module instance
-var template = new Template()
+var scraper = new Scraper()
 
 // a normal status code is returned when the package runs successfully.
-process.exit(template instanceof Template == true ? 0 : 1)
+process.exit(scraper instanceof Scraper == true ? 0 : 1)
 ```
 
 # Getting Started
