@@ -109,7 +109,7 @@ describe(`${target}`, function () {
   /**
    * It should be able to write files to the file system.
    */
-  it(`${target}.sync`,async function () {
+  it(`${target}.sync`, async function () {
     // module instance
     fileRecorder = new FileRecorder()
 

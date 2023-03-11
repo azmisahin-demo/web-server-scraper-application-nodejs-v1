@@ -54,7 +54,7 @@ class Content {
   load(document) {
     // parse document
     const dom = parser.parseDocument(document)
-    
+
     // DOM (document object model)
     return dom
   }

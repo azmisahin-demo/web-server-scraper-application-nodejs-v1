@@ -51,7 +51,7 @@ class Downloader {
    * fetch target web content
    * @param {string} url target web address
    */
-  async fetchContent(url){
+  async fetchContent(url) {
     // exec
     const { stdout, stderr } = await exec(`curl ${url}`)
 
