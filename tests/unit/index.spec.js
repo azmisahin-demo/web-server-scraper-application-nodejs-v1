@@ -11,6 +11,7 @@ const Scraper = require('../../src')
 describe(`${target}`, function () {
   // Main application carrier
   let scraper
+  let mock = { origin: 'https://www.ripe.net/' }
 
   /**
    * Instance initalize
@@ -22,7 +23,7 @@ describe(`${target}`, function () {
   /**
    * Should create an instance of Module.
    */
-  it(`${target}.constructor`, function () {
+  it(`${target}.constructor`, async function () {
     // module instance
     scraper = new Scraper()
 
@@ -34,6 +35,29 @@ describe(`${target}`, function () {
 
     // operation
     let result = scraper
+
+    // result
+    let actual = result
+
+    // condination
+    assert(actual instanceof expected)
+  })
+
+  /**
+   * start.
+   */
+  it(`${target}.start`, async function () {
+    // module instance
+    scraper = new Scraper()
+
+    // mock
+    let _parameters = Scraper
+
+    // parameters
+    let expected = _parameters
+
+    // operation
+    let result = await scraper.start(mock.origin)
 
     // result
     let actual = result

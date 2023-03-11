@@ -22,7 +22,7 @@ describe(`${target}`, function () {
   /**
    * Should create an instance of Module.
    */
-  it(`${target}.constructor`, function () {
+  it(`${target}.constructor`, async function () {
     // module instance
     scheduler = new Scheduler()
 

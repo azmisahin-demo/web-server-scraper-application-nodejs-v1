@@ -5,6 +5,9 @@
  * Library for node js projects.
  */
 
+const Queue = require('package-storage-javascript')
+const Scheuler = require('./scheduler')
+
 /**
  * @class
  * Scraper Library
@@ -37,8 +40,16 @@ class Scraper {
    * @returns {Scraper} Scraper instance.
    */
   constructor() {
+    this.queue = new Queue()
+
+    new Scheuler(this.queue)
+
     // return instance
     return this
+  }
+
+  async start(origin) {
+    await this.queue.addItem('links', { link: origin, date: new Date() })
   }
 }
 

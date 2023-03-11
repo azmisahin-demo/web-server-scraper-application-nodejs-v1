@@ -5,6 +5,15 @@
  * Library for node js projects.
  */
 
+let Downloader = require('./downloader')
+const Content = require('./content')
+const Finder = require('./finder')
+const downloader = new Downloader()
+const content = new Content()
+const finder = new Finder()
+const FileRecorder = require('./file-recorder')
+const fileRecorder = new FileRecorder()
+
 /**
  * @class
  * Scheuler Library
@@ -33,10 +42,42 @@
 class Scheuler {
   /**
    * @constructor
-   *
+   * @param {Queue}
    * @returns {Scheuler} Scheuler instance.
    */
-  constructor() {
+  constructor(queue) {
+    setInterval(async () => {
+      console.log("tick")
+      // read item
+      let partition = await queue.readItem('links', 0)
+      
+      if (partition) {
+        
+        let url = new URL(partition.link)
+        
+        console.log("que", url)
+
+        let fileName = 'index.html'
+        let folderPath = url.pathname
+        let { data, err } = await downloader.fetchContent(partition.link)
+
+        if (!err) {
+          console.log('errrrrrrr')
+          await fileRecorder.sync('temp' + folderPath, fileName, data)
+          let dom = await content.load(data)
+          let nodeList = await finder.hyperlinks(dom)
+
+          try {
+            nodeList.forEach((element) => {
+              queue.add(element.href)
+            })
+          } catch (error) {
+            //
+            console.error('nodelist #%d', error)
+          }
+        }
+      }
+    }, 5000)
     // return instance
     return this
   }

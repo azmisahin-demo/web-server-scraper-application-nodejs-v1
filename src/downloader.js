@@ -56,7 +56,7 @@ class Downloader {
     const { stdout, stderr } = await exec(`curl ${url}`)
 
     // return content
-    return { stdout, stderr }
+    return { data: stdout, err: stderr }
   }
 }
 

@@ -68,7 +68,8 @@
     "prettier": "2.6.2"
   },
   "dependencies": {
+    "htmlparser2": "^8.0.1",
     "jsdom": "^21.1.0",
-    "htmlparser2": "^8.0.1"
+    "package-storage-javascript": "^0.0.1"
   }
 }
