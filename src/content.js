@@ -6,6 +6,11 @@
  */
 
 /**
+ * dependencies
+ */
+const parser = require('htmlparser2')
+
+/**
  * @class
  * Content Library
  *
@@ -39,6 +44,19 @@ class Content {
   constructor() {
     // return instance
     return this
+  }
+
+  /**
+   * load html content
+   * @param {string} document HTML Document
+   * @returns DOM
+   */
+  load(document) {
+    // parse document
+    const dom = parser.parseDocument(document)
+    
+    // DOM (document object model)
+    return dom
   }
 }
 
