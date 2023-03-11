@@ -7,21 +7,21 @@
 
 /**
  * @class
- * Scraper Library
+ * Content Library
  *
  * @example
  *
  *  // module instance
- *  scraper = new Scraper()
+ *  content = new Content()
  *
  *  // mock
- *  let _parameters = Scraper
+ *  let _parameters = Content
  *
  *  // parameters
  *  let expected = _parameters
  *
  *  // operation
- *  let result = scraper
+ *  let result = content
  *
  *  // result
  *  let actual = result
@@ -30,11 +30,11 @@
  *  assert(actual instanceof expected)
  *
  */
-class Scraper {
+class Content {
   /**
    * @constructor
    *
-   * @returns {Scraper} Scraper instance.
+   * @returns {Content} Content instance.
    */
   constructor() {
     // return instance
@@ -43,7 +43,7 @@ class Scraper {
 }
 
 /**
- * Scraper Library
- * @module scraper
+ * Content Library
+ * @module content
  */
-module.exports = Scraper
+module.exports = Content

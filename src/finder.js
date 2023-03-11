@@ -7,21 +7,21 @@
 
 /**
  * @class
- * Scraper Library
+ * Finder Library
  *
  * @example
  *
  *  // module instance
- *  scraper = new Scraper()
+ *  finder = new Finder()
  *
  *  // mock
- *  let _parameters = Scraper
+ *  let _parameters = Finder
  *
  *  // parameters
  *  let expected = _parameters
  *
  *  // operation
- *  let result = scraper
+ *  let result = finder
  *
  *  // result
  *  let actual = result
@@ -30,11 +30,11 @@
  *  assert(actual instanceof expected)
  *
  */
-class Scraper {
+class Finder {
   /**
    * @constructor
    *
-   * @returns {Scraper} Scraper instance.
+   * @returns {Finder} Finder instance.
    */
   constructor() {
     // return instance
@@ -43,7 +43,7 @@ class Scraper {
 }
 
 /**
- * Scraper Library
- * @module scraper
+ * Finder Library
+ * @module finder
  */
-module.exports = Scraper
+module.exports = Finder

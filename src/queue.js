@@ -7,21 +7,21 @@
 
 /**
  * @class
- * Scraper Library
+ * Queue Library
  *
  * @example
  *
  *  // module instance
- *  scraper = new Scraper()
+ *  queue = new Queue()
  *
  *  // mock
- *  let _parameters = Scraper
+ *  let _parameters = Queue
  *
  *  // parameters
  *  let expected = _parameters
  *
  *  // operation
- *  let result = scraper
+ *  let result = queue
  *
  *  // result
  *  let actual = result
@@ -30,11 +30,11 @@
  *  assert(actual instanceof expected)
  *
  */
-class Scraper {
+class Queue {
   /**
    * @constructor
    *
-   * @returns {Scraper} Scraper instance.
+   * @returns {Queue} Queue instance.
    */
   constructor() {
     // return instance
@@ -43,7 +43,7 @@ class Scraper {
 }
 
 /**
- * Scraper Library
- * @module scraper
+ * Queue Library
+ * @module queue
  */
-module.exports = Scraper
+module.exports = Queue
